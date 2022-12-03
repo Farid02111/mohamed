@@ -1,21 +1,31 @@
+
+
 :root{
     --bg-color: #1b212f;
+    --pink: #ff0088;
+    --light-green: hsl(176.1, 86.5%, 34.9%);
+    --light-green2: rgb(2, 255, 238);
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Almarai', sans-serif;
     list-style: none;
 }
 
 body {
     background-color: var(--bg-color);
     color: white;
+    height: 90vh;
+    overflow: hidden;
 }
 
 nav{
     margin-top: 1em;
+    width: 800px;
+    margin-left: auto;
 }
 
 nav ul {
@@ -48,39 +58,93 @@ nav ul {
     content: '';
     width: 120%;
     height: 120%;
-    background: linear-gradient(90deg,#ff0088 0%, var(--bg-color) 60% 100%);
+    background: linear-gradient(90deg,var(--pink) 0%, var(--bg-color) 60% 100%);
     position: absolute;
     left: 0%;
     z-index: -1;
     border-radius: 50px;
 }
 
-
-.contant {
-    display: flex;
-    justify-content: center;
-}
-
-.contant .left {
-    width: 20%;
+.content {
     position: relative;
+    height: 100%;
 }
 
-.contant .bg-img-con {
-    width: 25em;
-    height: 25em;
-    background: linear-gradient(268deg, hsl(176deg 86% 35%) 19%, hsl(203deg 49% 19%) 93%);
+.left{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content .bg-img-con {
+    width: 30em;
+    height: 30em;
+    background: linear-gradient(270deg,var(--light-green) 0%, var(--bg-color) 93%);
     border-radius: 50%;
     margin-left: -2em;
     margin-top: 3em;
+    
 }
 
-.contant .bg-img-con img {
-    width: 30em;
+.content .bg-img-con img {
+    width: 120%;
+    margin-top: -30px;
+}
+
+.content .right{
     position: absolute;
-    top: -1em;
+    right: 5%;
+    width: 420px;
+    text-align: right;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.contant .right {
-    width: 80%;
+.content .right h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.content .right h2{
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.content .right h2::after{
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: -20px;
+    width: 100%;
+    height: 10px;
+    background-image: linear-gradient(270deg,var(--pink) 0%, var(--bg-color) 40% 100%);
+}
+
+.content .right p{
+    line-height: 1.5;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(120deg, var(--light-green2) 0%, var(--bg-color) 65% 100%);
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    top: -65px;
+    left: 7px;
+    transform: rotateZ(18deg);
+}
+
+.small-circle {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: var(--bg-color);
 }
