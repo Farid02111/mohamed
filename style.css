@@ -151,6 +151,28 @@ nav ul {
 
 
 
+
+
+
+.products {
+    width: 100%;
+    display: flex;
+    margin-top: 10em;
+}
+
+.img-product {
+    display: flex;
+    width: 65%;
+    height: 200px;
+}
+
+.products-desc {
+    display: flex;
+    width: 35%;
+    text-align: right;
+}
+
+
 /* 
 ************************
     TODO Ebranhim Gad Products
