@@ -19,10 +19,10 @@
     <nav>
         <ul>
             <li class="gra-border-con">
-                <div class="title">Home</div>
+                <div class="title" id="home-link">Home</div>
             </li>
             <li class="gra-border-con">
-                <div class="title">Products</div>
+                <div class="title" id="products-link">Products</div>
             </li>
             <li class="gra-border-con">
                 <div class="title">About</div>
@@ -36,16 +36,23 @@
         </ul>
     </nav>
 
-    <section class="products">
+    <section class="products" id="products">
         <div class="img-product">
-
+            <img src="https://images.pexels.com/photos/6848745/pexels-photo-6848745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 " alt="">
+            <div class="left">
+                <i class="fa-solid fa-caret-left"></i>
+            </div>
+            <div class="right">
+                <i class="fa-solid fa-caret-right"></i>
+            </div>
         </div>
         <div class="products-desc">
-            <h2>جميع المنتجات التي يتم عرضها من صناعة وتنفيذ السيدات المشاركه في برامج المدينه الامنه</h2>
+            <h2>جميع المنتجات التي يتم عرضها من صناعة وتنفيذ السيدات المشاركات في برامج المدينة الامنة</h2>
+            <p>ولشراء منتجاتنا تواصل مع مسئولي المبيعات في البرنامج</p>
         </div>
     </section>
 
-    <!-- <section class="content">
+    <section class="content" id="content">
         <div class="left">
             <div class="bg-img-con">
                 <img src="./images/4294748 copy (2).png" alt="">
@@ -53,7 +60,7 @@
         </div>
         <div class="right">
             <div class="circle">
-                <div class="small-circle"></div>
+                
             </div>
             <h1>المدينة الآمنة</h1>
             <h2>
@@ -61,7 +68,27 @@
             </h2>
             <p>المدينة الآمنة أو المدينة صديقة النساء، مصطلحات كثيرة أطلقت على مشروع بمكتبة مصر العامة بعزبة البرج جاء برعاية المجلس القومي للمرأة</p>
         </div>
-    </section> -->
+    </section>
+
+
+    <script>
+        let productsElement = document.getElementById("products");
+        let contentElement = document.getElementById("content");
+
+        let homeLink = document.getElementById('home-link');
+        let productsLink = document.getElementById('products-link');
+
+        homeLink.addEventListener('click',function(){
+            productsElement.style.display = "none"
+            contentElement.style.display = "block"
+        })
+
+        productsLink.addEventListener('click',function(){
+            productsElement.style.display = "flex"
+            contentElement.style.display = "none"
+        })
+
+    </script>
 </body>
 
 </html>
