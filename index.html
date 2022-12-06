@@ -25,7 +25,7 @@
                 <div class="title" id="products-link">Products</div>
             </li>
             <li class="gra-border-con">
-                <div class="title">About</div>
+                <div class="title" id="about-link">About</div>
             </li>
             <li class="gra-border-con">
                 <div class="title">Time table</div>
@@ -36,56 +36,91 @@
         </ul>
     </nav>
 
-    <section class="products" id="products">
-        <div class="img-product">
-            <img src="https://images.pexels.com/photos/6848745/pexels-photo-6848745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 " alt="">
+    <div class="app">
+        <section class="products" id="products">
+            <div class="img-product">
+                <img src="https://images.pexels.com/photos/6848745/pexels-photo-6848745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 " alt="">
+                <div class="left">
+                    <i class="fa-solid fa-caret-left"></i>
+                </div>
+                <div class="right">
+                    <i class="fa-solid fa-caret-right"></i>
+                </div>
+            </div>
+            <div class="products-desc">
+                <h2>جميع المنتجات التي يتم عرضها من صناعة وتنفيذ السيدات المشاركات في برامج المدينة الامنة</h2>
+                <p>ولشراء منتجاتنا تواصل مع مسئولي المبيعات في البرنامج</p>
+            </div>
+        </section>
+    
+        <section class="content" id="content">
             <div class="left">
-                <i class="fa-solid fa-caret-left"></i>
+                <div class="bg-img-con">
+                    <img src="./images/4294748 copy (2).png" alt="">
+                </div>
             </div>
             <div class="right">
-                <i class="fa-solid fa-caret-right"></i>
+                <div class="circle">
+                    
+                </div>
+                <h1>المدينة الآمنة</h1>
+                <h2>
+                    بـعــزبـــة الــــبــــــــرج
+                </h2>
+                <p>المدينة الآمنة أو المدينة صديقة النساء، مصطلحات كثيرة أطلقت على مشروع بمكتبة مصر العامة بعزبة البرج جاء برعاية المجلس القومي للمرأة</p>
             </div>
-        </div>
-        <div class="products-desc">
-            <h2>جميع المنتجات التي يتم عرضها من صناعة وتنفيذ السيدات المشاركات في برامج المدينة الامنة</h2>
-            <p>ولشراء منتجاتنا تواصل مع مسئولي المبيعات في البرنامج</p>
-        </div>
-    </section>
+        </section>
+    
+        <section class="about" id="about">
+            <p>نظم المجلس القومي للمرأه بدمياط,ووحدة فاتكافؤ الفرص بديوان عام للمحافظه بالتعاون مع وحدة السكان ومديرية
+                الصحه
+                الفاعليه الثقافيه الثانيه منذ افتتاحها في مكتبة مصر العامه بمدينة عزبة البرج داخل المنطقة شارك فيها عدد كبير
+                من الاطفال والنساء وشاهدو وشاركوا في العرو ض الترفيهيه ,وورش الرسم والتلوين والغناء وايضا تم عرض منتجات
+                السيدات من الصناعات اليدويه"المدينه الصادقه للنساء"</p>
+    
+            <p>وقالت السيده مروة نبيل مقرر المجلس القومي للمراه بدمياط ان الفاعليه تضمنت عقد ندوة ضد التحرش شارك فيها عدد
+                كبير من السيدات وتفاعلوا مع الاسئله والافكار التي تم طرحها كما شهد معرض منتجات ست الدار اقبال من الحاضرين
+                والذي تضمن مأكولات ومشروبات وحلويات شرقي وغربي واكسسوارات وكوروشيه وشموع هاند ميد وهدايا متنوعه ولعب اطفال
+                ونباتات زراعيه لمطبخ ست الدار والذي يشمل زراعة الكمون والفل والنعناع</p>
+        </section>
+    </div>
 
-    <section class="content" id="content">
-        <div class="left">
-            <div class="bg-img-con">
-                <img src="./images/4294748 copy (2).png" alt="">
-            </div>
-        </div>
-        <div class="right">
-            <div class="circle">
-                
-            </div>
-            <h1>المدينة الآمنة</h1>
-            <h2>
-                بـعــزبـــة الــــبــــــــرج
-            </h2>
-            <p>المدينة الآمنة أو المدينة صديقة النساء، مصطلحات كثيرة أطلقت على مشروع بمكتبة مصر العامة بعزبة البرج جاء برعاية المجلس القومي للمرأة</p>
-        </div>
-    </section>
+    
 
 
     <script>
         let productsElement = document.getElementById("products");
         let contentElement = document.getElementById("content");
+        let aboutElement = document.getElementById("about");
 
         let homeLink = document.getElementById('home-link');
         let productsLink = document.getElementById('products-link');
+        let aboutLink = document.getElementById('about-link');
 
         homeLink.addEventListener('click',function(){
-            productsElement.style.display = "none"
-            contentElement.style.display = "block"
+            contentElement.classList.add('active-pos')
+
+            contentElement.style.zIndex = 3;
+            productsElement.style.zIndex = 5;
+            aboutElement.style.zIndex = 4;
+
+            productsElement.classList.add('hidden-left')
+            aboutElement.classList.add('hidden-right')
+            setTimeout(() => {
+                contentElement.classList.add('active')
+            }, 2000);
         })
 
         productsLink.addEventListener('click',function(){
             productsElement.style.display = "flex"
             contentElement.style.display = "none"
+            aboutElement.style.display = "none"
+        })
+        
+        aboutLink.addEventListener('click',function(){
+            productsElement.style.display = "none"
+            contentElement.style.display = "none"
+            aboutElement.style.display = "block"
         })
 
     </script>

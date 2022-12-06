@@ -74,9 +74,24 @@ nav ul li:hover {
     border-radius: 50px;
 }
 
-.content {
+
+.app{
     position: relative;
+    height: 90vh;
+    margin-top: 4em;
+    background-color: var(--bg-color);
+}
+
+.app section{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: var(--bg-color);
+}
+
+.content {
     height: 100%;
+    width: 100%;
 }
 
 .content .left{
@@ -167,10 +182,10 @@ nav ul li:hover {
 .products {
     width: 100%;
     display: flex;
-    margin-top: 10em;
     justify-content: space-between;
     align-items: center;
     padding: 0em 3em;
+    z-index: 5;
 }
 
 .img-product {
@@ -215,8 +230,38 @@ nav ul li:hover {
     right: 35%;
 }
 
-/* 
-************************
-    TODO Ebranhim Gad Products
-************************
- */
+.about {
+    width: 100%;
+    color: white;
+    font-size: 2em;
+    padding-right: 2em;
+    text-align: right;
+    z-index: 4;
+}
+
+.about p {
+    width: 700px;
+    margin-top: 2em;
+    margin-left: auto;
+}
+
+.hidden-left{
+    transform:translateX(100%);
+    transition: all 1s;
+}
+
+.hidden-right{
+    transform: translateX(-100%);
+    transition: all 1s;
+    transition-delay: 1s;
+}
+
+.app section.active{
+    top: 0px;
+    transition: all 1s;
+}
+
+.app .active-pos{
+    left: 0px;
+    top: 150%;
+}
