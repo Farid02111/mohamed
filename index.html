@@ -28,7 +28,7 @@
                 <div class="title" id="about-link">About</div>
             </li>
             <li class="gra-border-con">
-                <div class="title">Time table</div>
+                <div class="title" id="time-link">Time table</div>
             </li>
             <li class="gra-border-con">
                 <div class="title">Contact</div>
@@ -83,6 +83,98 @@
                 والذي تضمن مأكولات ومشروبات وحلويات شرقي وغربي واكسسوارات وكوروشيه وشموع هاند ميد وهدايا متنوعه ولعب اطفال
                 ونباتات زراعيه لمطبخ ست الدار والذي يشمل زراعة الكمون والفل والنعناع</p>
         </section>
+
+        <section class="time" id="time">
+            
+            <table cellpading="6" cellspacing="0">
+                <thead>
+                    <tr class="a">
+                        <td>
+                            <h5>الموعد</h5>
+                        </td>
+                        <td>
+                            <h3>النشاط</h3>
+                        </td>
+                        <td class="line">
+                            <h4>النشاط</h4>
+                        </td>
+                        <td class="line">
+                            <h4>الموافق</h4>
+                        </td>
+                        <td>
+                            <h2>اليوم</h2>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+        
+                        <td>من4الي7</td>
+                        <td>ايموجرامي مقلمة المدارس</td>
+                        <td class="line">ورشة تفصيل بنطلون المدارس</td>
+                        <td class="line">
+                            <div class="border"></div>
+                        </td>
+                        <td>السبت</td>
+        
+        
+                    </tr>
+                    <tr class="a">
+                        <td>من4الي7</td>
+                        <td>تطريز</td>
+                        <td class="line">رسم علي الملابس</td>
+                        <td class="line">
+                            <div class="border"></div>
+                        </td>
+                        <td>الاحد</td>
+        
+        
+                    </tr>
+                    <tr>
+                        <td>من4الي7</td>
+                        <td>تنمبة مهارات اطفال</td>
+                        <td class="line">ندوة عن حقوق الزوجة</td>
+                        <td class="line">
+                            <div class="border"></div>
+                        </td>
+                        <td>الاثنين</td>
+                    </tr>
+                    <tr class="a">
+                        <td>من4الي7</td>
+                        <td>كروشيه</td>
+                        <td class="line">اعادة تدوير الملابس</td>
+                        <td class="line">
+                            <div class="border"></div>
+                        </td>
+                        <td>الثلاثاء</td>
+                    </tr>
+                    <tr>
+                        <td>من4الي7</td>
+                        <td>خياطة وتقفيل بنطلون المدارس</td>
+                        <td class="line">ورشه مكرميه</td>
+                        <td class="line">
+                            <div class="border"></div>
+                        </td>
+                        <td>الاربعاء</td>
+                    </tr>
+                    <tr class="a">
+                        <td>من4الي7</td>
+                        <td>ورشه لذوي الهمم</td>
+                        <td class="line">ندوة تغذيه علاجيه لمرضي السكر</td>
+                        <td class="line">
+                            <div class="border"></div>
+                        </td>
+                        <td>الخميس</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                للإطــــلاع على جدول مواعيد الندوات والورش المنفذة بالمدينة الآمنة
+            </p>
+        </section>
+
+
     </div>
 
     
@@ -90,37 +182,127 @@
 
     <script>
         let productsElement = document.getElementById("products");
-        let contentElement = document.getElementById("content");
+        let homeElement = document.getElementById("content");
         let aboutElement = document.getElementById("about");
+        let timeElement = document.getElementById("time");
 
         let homeLink = document.getElementById('home-link');
         let productsLink = document.getElementById('products-link');
         let aboutLink = document.getElementById('about-link');
+        let timeLink = document.getElementById('time-link');
+
+        let homeZIndex = 3;
+        let productsZIndex = 5;
+        let aboutZIndex = 4;
+
+        let onTop = "home"
+
+        // homeElement.classList.add('active-pos')
+        // homeElement.style.zIndex = 3;
+        // productsElement.style.zIndex = 5;
+        // aboutElement.style.zIndex = 4;
+
+        // productsElement.classList.add('hidden-left')
+        // aboutElement.classList.add('hidden-right')
+        // setTimeout(() => {
+        //     homeElement.classList.add('active')
+
+        //     homeElement.style.zIndex = 5;
+        //     productsElement.style.zIndex = 4;
+        //     aboutElement.style.zIndex = 3;
+
+        //     productsElement.classList.remove('hidden-left')
+        //     aboutElement.classList.remove('hidden-right')
+        //     homeElement.classList.remove('active-pos')
+
+           
+        // }, 2000);
+
 
         homeLink.addEventListener('click',function(){
-            contentElement.classList.add('active-pos')
 
-            contentElement.style.zIndex = 3;
-            productsElement.style.zIndex = 5;
-            aboutElement.style.zIndex = 4;
 
-            productsElement.classList.add('hidden-left')
-            aboutElement.classList.add('hidden-right')
-            setTimeout(() => {
-                contentElement.classList.add('active')
-            }, 2000);
+            productsElement.classList.add('run')
+            aboutElement.classList.add('run')
+            homeElement.classList.remove('run')
+            timeElement.classList.add('run')
+
+            productsElement.classList.remove('active')
+            aboutElement.classList.remove('active')
+            homeElement.classList.add('active')
+            timeElement.classList.remove('active')
+
+
+            // homeElement.classList.add('active-pos')
+
+
+
+            // homeElement.style.zIndex = 3;
+            // productsElement.style.zIndex = 5;
+            // aboutElement.style.zIndex = 4;
+
+            // productsElement.classList.add('hidden-left')
+            // aboutElement.classList.add('hidden-right')
+            // setTimeout(() => {
+            //     homeElement.classList.add('active')
+            // }, 2000);
         })
 
         productsLink.addEventListener('click',function(){
-            productsElement.style.display = "flex"
-            contentElement.style.display = "none"
-            aboutElement.style.display = "none"
+
+            productsElement.classList.remove('run')
+            aboutElement.classList.add('run')
+            homeElement.classList.add('run')
+            timeElement.classList.add('run')
+
+            productsElement.classList.add('active')
+            aboutElement.classList.remove('active')
+            homeElement.classList.remove('active')
+            timeElement.classList.remove('active')
+           
+            
+            // homeElement.classList.remove('active-pos')
+            // productsElement.classList.add('active-pos')
+
+            // homeElement.style.zIndex = 3;
+            // productsElement.style.zIndex = 5;
+            // aboutElement.style.zIndex = 4;
+
+            // productsElement.classList.add('hidden-left')
+            // aboutElement.classList.add('hidden-right')
+            // setTimeout(() => {
+            //     homeElement.classList.add('active')
+            // }, 2000);
         })
         
         aboutLink.addEventListener('click',function(){
-            productsElement.style.display = "none"
-            contentElement.style.display = "none"
-            aboutElement.style.display = "block"
+
+            productsElement.classList.add('run')
+            aboutElement.classList.remove('run')
+            homeElement.classList.add('run')
+            timeElement.classList.add('run')
+
+            productsElement.classList.remove('active')
+            aboutElement.classList.add('active')
+            homeElement.classList.remove('active')
+            timeElement.classList.remove('active')
+
+            // productsElement.style.display = "none"
+            // contentElement.style.display = "none"
+            // aboutElement.style.display = "block"
+        })
+
+        timeLink.addEventListener('click',function(){
+
+            productsElement.classList.add('run')
+            aboutElement.classList.add('run')
+            homeElement.classList.add('run')
+            timeElement.classList.remove('run')
+
+            productsElement.classList.remove('active')
+            aboutElement.classList.remove('active')
+            homeElement.classList.remove('active')
+            timeElement.classList.add('active')
         })
 
     </script>
