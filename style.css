@@ -324,6 +324,7 @@ td {
 
 .border {
     width: 50px;
-    height: 5px;
+    height: 3px;
     background-color: white;
+    margin: 0 auto;
 }
